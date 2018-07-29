@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	int highBound;
+//	int highBound;
 	int lowBound;
 
 	std::cout << "Hello, this is a number guessing game. What two integers would you like to guess between? (low then high, sperate with a space and hit enter)\n";
