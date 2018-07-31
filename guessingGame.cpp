@@ -1,4 +1,7 @@
 /*
+ * File Name: guessingGame.cpp
+ * Purpose: Just c++ practice after intro to programing ended, first project using git
+ *
  * [X] Intro program and prompt user for high and low bounds bounds
  * [X] gen rand int
  * [X] prompt for guess
@@ -28,6 +31,12 @@ int main(void)
 		std::cout << "(low then high, sperate with a space and hit enter)\n";
 		std::cin >> lowBound;
 		std::cin >> highBound;
+
+		if (lowBound > highBound) { // if user enters highBound first they will be swapped
+			lowBound = lowBound + highBound;
+			highBound = lowBound - highBound;
+			lowBound = lowBound - highBound;
+		}
 
 		ans = rand() % (highBound - lowBound) + lowBound; // generates a rand num in bounds
 
